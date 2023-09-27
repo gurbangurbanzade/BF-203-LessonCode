@@ -1,0 +1,83 @@
+/* .redPar {
+  color: brown;
+}
+.fonT32px {
+  font-size: 32px;
+}
+.customPar {
+  background-color: yellow;
+} */
+/* p {
+  color: blue;
+}
+#par1 {
+  color: red;
+}
+#par2 {
+  color: red;
+} */
+/* body {
+  color: red;
+}
+li {
+  color: green;
+} */
+
+/* body > ul {
+  color: red;
+} */
+/* * {
+  color: red;
+  background-color: yellow;
+} */
+/* * {
+  margin: 0;
+} */
+/* p,
+h6,
+li {
+  color: green;
+}
+.headingH6,
+#par1 {
+  color: red;
+}
+
+body>ul{
+
+} */
+
+/* p + h6 {
+  background-color: red;
+} */
+
+/* p ~ h6 {
+  background-color: red;
+} */
+
+/* li:hover {
+  color: red;
+} */
+
+/* a:active {
+  color: red;
+} */
+/* .list.list1 {
+  color: red;
+} */
+/* p[class] {
+  background-color: blue;
+} */
+
+/* a:active {
+  color: yellow;
+}
+a:link {
+  color: red;
+}
+a:visited {
+  color: gray;
+} */
+/* li:nth-child(3) {
+  background-color: yellow;
+} */

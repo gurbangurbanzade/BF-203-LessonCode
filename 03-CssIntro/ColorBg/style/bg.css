@@ -1,0 +1,32 @@
+/* body {
+  background-color: gray;
+}
+.box1 {
+  height: 200px;
+  width: 100%;
+  background-color: red;
+}
+
+.box2 {
+  height: 200px;
+  width: 100%;
+  background-color: yellow;
+} */
+
+.box1 {
+  border: 40px dashed black;
+  height: 1000px;
+  width: 1000px;
+  /* background-color: red; */
+  background-image: url("./../images/emoji.png"), url("./../images/reng.png");
+  background-image: url("./../images/emoji.png");
+  background-image: url("./../images/reng.png"), url("./../images/Profile.png");
+
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover, cover; */
+  /* background-image: url("./../images/emoji.png"); */
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-color: red;
+}
