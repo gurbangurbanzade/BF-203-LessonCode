@@ -1,0 +1,26 @@
+div {
+  font-size: 30px;
+}
+
+p {
+  font-family: "Arial, Helvetica, sans-serif";
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-weight: bold; */
+  /* font-size: 16px; */
+  /* em rem */
+  font-size: 1em;
+  /* 1em=40px */
+}
+
+.par2 {
+  font-family: "Arial, Helvetica, sans-serif";
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-size: 16px;
+  /* 1rem=16px html */
+  /* font-weight: lighter; */
+  /* letter-spacing: -3px; */
+  /* word-spacing: 9px; */
+  font-weight: 100;
+}
