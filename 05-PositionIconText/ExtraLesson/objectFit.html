@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box1 {
+      width: 400px;
+      height: 200px;
+      object-fit: fill;
+    }
+    .box2 {
+      width: 400px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .box3 {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .box4 {
+      width: 200px;
+      height: 200px;
+      object-fit: none;
+    }
+    .box5 {
+      width: 400px;
+      height: 200px;
+      object-fit: scale-down;
+    }
+    .card {
+      border: 1px solid black;
+      width: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .cardImg {
+      /* border-radius: 20px; */
+
+      background-image: url("Profile.png");
+      height: 150px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .text {
+      padding: 10px;
+    }
+    p {
+      text-align: justify;
+    }
+    button {
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      color: blue;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+    }
+    button:hover {
+      background-color: rgb(164, 127, 199);
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- <img class="box1" src="Profile.png" alt="" />
+    <img class="box2" src="Profile.png" alt="" />
+    <br />
+    <img class="box3" src="Profile.png" alt="" />
+    <img class="box4" src="Profile.png" alt="" />
+    <img class="box5" src="Profile.png" alt="" /> -->
+    <br />
+
+    <div class="card">
+      <div class="cardImg"></div>
+      <div class="text">
+        <h3>Lorem, ipsum.</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          aperiam ullam rem, iure eligendi ipsum?
+        </p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </body>
+</html>

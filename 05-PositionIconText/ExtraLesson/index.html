@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* 
+    start ani
+1 rem =16px
+1 em =16px
+
+parent div font size = 20px
+child div font size 1em=20px
+child div font size 1rem=16px
+
+*/
+
+    .box {
+      border: 1px solid black;
+      height: 600px;
+      background-size: cover;
+      width: 400px;
+      margin: auto;
+      background-position: center;
+    }
+    .box1 {
+      background-image: url("emoji.png");
+    }
+    .box2 {
+      background-image: url("pngwing.com.png");
+      /* text-align: center; */
+      /* width: min-content; */
+      width: 200px;
+    }
+    .box3 {
+      background-image: url("qarisiqReng.jpg");
+      color: white;
+      background-attachment: fixed;
+      /* parallax */
+    }
+    .box4 {
+      background-color: red;
+    }
+    p {
+      /* hyphens: auto; */
+      /* writing-mode: vertical-rl; */
+    }
+    #salamBox {
+      background: red;
+      background: rgb(33, 36, 0);
+      background: linear-gradient(
+        357deg,
+        rgba(33, 36, 0, 1) 3%,
+        rgba(121, 9, 120, 1) 57%,
+        rgba(59, 33, 55, 0.1825105042016807) 100%
+      );
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      border: 5px solid red;
+      /* box sizinge aid deyil */
+      outline: 5px solid green;
+    }
+
+    .pare {
+      font-size: 40px;
+    }
+    p {
+      font-size: 16px;
+      font-size: 1em;
+      /* font-size: 1rem; */
+    }
+    span {
+      font-size: 16px;
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <table border="1px">
+      <tr>
+        <td rowspan="4">Tuesday</td>
+        <td>8:00 a.m</td>
+        <td>5:00 p.m</td>
+        <td rowspan="2" style="padding: 7px">XPath</td>
+      </tr>
+      <tr>
+        <td rowspan="2">11:00 a.m</td>
+        <td rowspan="2">2:00 p.m</td>
+      </tr>
+      <tr>
+        <td rowspan="2">XSL Transformations</td>
+      </tr>
+      <tr>
+        <td>2:00 p.m</td>
+        <td>5:00 p.m</td>
+      </tr>
+    </table>
+    <div class="pare">
+      <p>em olcu -Lorem ipsum dolor sit amet.</p>
+    </div>
+    <span> rem olcu- Lorem, ipsum dolor.</span>
+
+    <div class="box box1" id="salamBox"></div>
+    <div class="box box2">
+      Lorem ipsum dolor sit amet.
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse
+        cupiditate magnam ea repudiandae voluptatibus, optio iure, velit veniam
+        quasi officia expedita voluptatum ullam rem animi cumque. Sequi, labore
+        magni?
+      </p>
+    </div>
+    <div class="box box3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum mollitia nemo
+      minus perferendis sapiente corrupti quia, optio ratione repellendus soluta
+      repellat corporis, unde architecto magnam repudiandae? Odio itaque eveniet
+      unde exercitationem officiis aperiam, laudantium explicabo libero commodi
+      fuga! Architecto enim nihil cum id aliquid laboriosam similique blanditiis
+      ipsam quaerat! Laudantium quaerat labore debitis libero odit, tempore
+      veritatis similique vitae molestiae ad ipsa recusandae iusto ducimus
+      aliquam blanditiis dolorem eveniet in tempora? Reiciendis, sapiente!
+      Doloribus exercitationem labore qui atque, sed nostrum vitae, dolorum
+      asperiores magnam expedita commodi. Voluptas possimus earum quae,
+      veritatis, odit distinctio maiores dolores obcaecati in accusantium
+      facilis est.
+    </div>
+    <div class="box box4"></div>
+  </body>
+</html>
