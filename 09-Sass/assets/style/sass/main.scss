@@ -1,0 +1,8 @@
+@use "./components/buttons";
+@use "./layout/header";
+@forward "./abstracts/variables";
+@forward "./layout/header";
+
+.container {
+  background-color: $esasReng;
+}

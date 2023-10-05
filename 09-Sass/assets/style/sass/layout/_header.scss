@@ -1,0 +1,85 @@
+@use "./../abstracts/variables" as *;
+@use "./../components/buttons" as *;
+@use "./../abstracts/extend" as *;
+@use "./../abstracts/mixins" as *;
+@forward "./../abstracts/variables";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: $esasReng;
+  font-family: $Main-font;
+  h1 {
+    @extend %arxaFon;
+    background-color: yellow;
+  }
+  ul {
+    @extend %flexJCBeetwen;
+    background-color: gray;
+    li {
+      @extend %arxaFon;
+    }
+    // li {
+    // }
+    // li {
+    // }
+    // li {
+    // }
+  }
+  .btnBox {
+    background-color: red;
+    // display: flex;
+    padding: 10px;
+    @extend %FlexColumn;
+    &Item {
+      @include btn;
+    }
+    .button1 {
+      //   @include btn;
+
+      @include btn;
+      //   @include buttons.btn;
+    }
+    .button2 {
+      @include btn;
+      //   @include buttons.btn;
+
+      background-color: yellow;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  background-color: gray;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  @include flex();
+  //   box($radius: 50%, $color: black, $size: 50px)
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border: 1px solid black;
+  }
+  .box1 {
+    @include box;
+  }
+  .box2 {
+    @include box($radius: 10%, $color: red, $size: 80px);
+  }
+  .box3 {
+    @include box($radius: 30%, $color: blue, $size: 20px);
+  }
+  .box3 {
+    @include box($radius: 30%, $color: blue);
+  }
+  .box4 {
+    @include box($color: purple);
+  }
+}
