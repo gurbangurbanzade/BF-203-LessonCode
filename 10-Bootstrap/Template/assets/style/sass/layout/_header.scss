@@ -1,0 +1,9 @@
+header {
+  background-color: $primaryColor;
+  color: $secondColor;
+  .starSide {
+    width: 50px;
+    height: 1px;
+    border: 1px solid $secondColor;
+  }
+}

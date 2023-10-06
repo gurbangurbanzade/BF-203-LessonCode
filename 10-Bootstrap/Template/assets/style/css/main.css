@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #2c3d50;
+}
+.navbar .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar .navbarBtn {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+.navbar .navbarBtn:hover {
+  color: #1abc9c;
+}
+.navbarBurger {
+  display: none;
+}
+.navbarBurger .burgerBtn {
+  background-color: #1abc9c;
+  color: white;
+}
+
+@media (max-width: 660px) {
+  .navbarLeft {
+    display: none;
+  }
+  .navbarBurger {
+    display: block;
+  }
+}
+header {
+  background-color: #1abc9c;
+  color: white;
+}
+header .starSide {
+  width: 50px;
+  height: 1px;
+  border: 1px solid white;
+}/*# sourceMappingURL=main.css.map */

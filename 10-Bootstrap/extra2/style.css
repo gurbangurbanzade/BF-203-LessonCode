@@ -1,0 +1,19 @@
+body {
+  /* background-color: red; */
+}
+
+h1::after {
+  content: "Salam BDU";
+  background-color: red;
+  font-size: 50px;
+  border-radius: 10%;
+}
+
+h1::before {
+  content: "salam necesiz";
+  border: 2px solid black;
+  width: 60px;
+  background-color: red;
+  font-size: 50px;
+  border-radius: 10%;
+}

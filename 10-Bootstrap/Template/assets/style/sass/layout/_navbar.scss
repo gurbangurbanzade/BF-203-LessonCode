@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #2c3d50;
+  .logo {
+    color: $secondColor;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navbarBtn {
+    color: $secondColor;
+    font-weight: bold;
+    font-size: 15px;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  &Burger {
+    display: none;
+    .burgerBtn {
+      background-color: $primaryColor;
+      color: $secondColor;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .navbar {
+    &Left {
+      display: none;
+    }
+    &Burger {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// @import './abstracts/abstracts';
+// @import './vendors/vendors';
+// @import './base/base';
+// @import './components/components';
+// @import './layout/layout';
+// @import './pages/pages';
+// @import './themes/themes';
+// @import 'settings';
+@import "./abstracts/variables";
+@import "base/reset";
+@import "./layout/navbar"; // body {
+@import "./layout/header"; // body {
+
+//   background-color: red;
+// }
