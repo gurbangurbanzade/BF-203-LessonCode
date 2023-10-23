@@ -190,7 +190,7 @@ let result = countyr.reduce((acc, elem) => {
   return acc;
 }, {});
 
-console.log(result);
+// console.log(result);
 
 let text = "gurban";
 // console.log(text[text.length - 1]);
@@ -213,8 +213,47 @@ let text = "gurban";
 //      console.log(key);  // EY ALI INSANLAR keyleri qaytarir
 //   console.log(obj[key]); // value-lari qaytarir
 // }
-let str = [];
-console.log(numbers.sort((a, b) => a - b));
-console.log(numbers.sort((a, b) => b - a));
-console.log(arr.sort());
+// let str = [];
+// console.log(numbers.sort((a, b) => a - b));
+// console.log(numbers.sort((a, b) => b - a));
+// console.log(arr.sort());
 // console.log(arr.sort((a, b) => a - b));
+const input = [
+  ["a", "b", "c"],
+  ["c", "d", "f"],
+  ["d", "f", "g"],
+];
+
+console.log(input);
+
+console.log(
+  input.flat().reduce((acc, elem) => {
+    acc[elem] ? acc[elem]++ : (acc[elem] = 1);
+    return acc;
+  }, {})
+);
+
+String.prototype.myLength = function () {
+  let check = true;
+  let i = 0;
+  do {
+    if (this[i]) {
+      i++;
+    } else {
+      check = false;
+    }
+  } while (check);
+
+  return i;
+};
+
+// "qurban".includes( )
+
+console.log("eli".myLength(""));
+
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+const filePath2 = `C:\Developmentnn\nprofile\aboutme.html`;
+const filePath3 = `C:\Developmentnn\\nprofile\aboutme.html`;
+console.log(`The file was uploaded from: ${filePath}`);
+console.log(`The file was uploaded from: ${filePath2}`);
+console.log(`The file was uploaded from: ${filePath3}`);
