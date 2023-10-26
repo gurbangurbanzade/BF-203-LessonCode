@@ -140,20 +140,20 @@ helloBtn = document.querySelector(".helloBtn");
 myInput = document.querySelector(".myInput");
 // a=5;
 let arr = [];
+
 helloBtn.addEventListener("click", function () {
   // console.log(myInput.value);
+  let obj = {};
+  obj.name = myInput.value;
 
-  arr.push(myInput.value);
-  // console.log(arr);
+  arr.push(obj);
+  console.log(arr);
   myInput.value = "";
   // console.log(arr);
 });
 
 console.log(arr);
 
--2 input yaradin
--buttona klik edende iputlarin deyeri konsola yazilsin
--iputlarin deyeri name ve surname kimi bir obyektin terkibinde arraya push olunsun
-
-
-
+// -2 input yaradin
+// -buttona klik edende iputlarin deyeri konsola yazilsin
+// -iputlarin deyeri name ve surname kimi bir obyektin terkibinde arraya push olunsun
