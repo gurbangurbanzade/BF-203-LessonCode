@@ -1,0 +1,14 @@
+{
+  "name": "24-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "storege.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
