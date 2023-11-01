@@ -1,0 +1,24 @@
+.card {
+  /* background-color: red; */
+  position: relative;
+}
+.cardImg {
+  /* display: none; */
+  height: 300px;
+}
+
+.prodName {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* line-height: 16px; fallback */
+  /* max-height: 32px; fallbackk */
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.favIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

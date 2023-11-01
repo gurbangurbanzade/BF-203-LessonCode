@@ -56,7 +56,7 @@ class="card rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform ho
             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
           />
         </svg>
-        <button class="text-sm">Add to cart</button>
+        <button class="text-sm basketBtn" name="${data.id}">Add to cart</button>
       </div>
     </div>
   </div>
@@ -65,12 +65,10 @@ class="card rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform ho
 `;
   });
 
+  // iconlarin handle
   let favIcons = document.querySelectorAll(".favIcon");
-
   let arr = [];
-
   let localFavArr = JSON.parse(localStorage.getItem("fav"));
-
   if (localFavArr) {
     arr = [...localFavArr];
   }
@@ -113,9 +111,40 @@ class="card rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform ho
 
   let items = document.querySelectorAll(".item");
 
-  for (item of items) {
-    item.addEventListener("click", function () {
+  for (let item of items) {
+    item.addEventListener("click", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
       console.log(this);
+    });
+  }
+
+  // basket btn
+
+  let basketBtns = document.querySelectorAll(".basketBtn");
+  let basketArr = [];
+  let localBasketArr = JSON.parse(localStorage.getItem("basket"));
+  if (localBasketArr) {
+    basketArr = [...localBasketArr];
+  }
+  for (let basketBtn of basketBtns) {
+    basketBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      console.log(this.name);
+
+      // console.log(basketArr.find((elem) => elem.price == this.name));
+      // basketin 2 element oldugunu tapmaq
+      if (basketArr.find((elem) => elem.id == this.name)) {
+        console.log(basketArr[+this.name - 1]);
+        basketArr[+this.name - 1].count++;
+        localStorage.setItem("basket", JSON.stringify(basketArr));
+      } else {
+        datas[+this.name - 1].count = 1;
+        basketArr.push(datas[+this.name - 1]);
+
+        localStorage.setItem("basket", JSON.stringify(basketArr));
+      }
     });
   }
 });
