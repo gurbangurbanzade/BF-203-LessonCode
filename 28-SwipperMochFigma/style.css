@@ -1,0 +1,16 @@
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.slide1 {
+  background: url("https://img.freepik.com/free-photo/view-car-running-high-speed_23-2150635415.jpg");
+}
+.slide2 {
+  background: url("https://wallpaperaccess.com/full/108458.jpg");
+  background-size: cover;
+}
+.slide3 {
+  background: url("https://wallpaperaccess.com/full/930587.jpg");
+  background-size: cover;
+}
