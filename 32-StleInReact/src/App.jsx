@@ -10,6 +10,7 @@ import Child from "./Pages/StyleInReact/Child";
 import AntComp from "./Pages/StyleInReact/AntComp";
 import { Footer } from "antd/es/layout/layout";
 import Home from "./Pages/WishList/Home";
+import Appp from "./Pages/Project/Appp";
 import { ChakraProvider } from "@chakra-ui/react";
 function App() {
   const [count, setCount] = useState(0);
@@ -17,8 +18,9 @@ function App() {
   return (
     <ChakraProvider>
       <>
-        <Header />
-        <Home />
+        <Appp />
+        {/* <Header />
+        <Home /> */}
         {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Header />}>
