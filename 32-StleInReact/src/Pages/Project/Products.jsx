@@ -41,9 +41,7 @@ function Products() {
                   let favElem = data.find(
                     (elem) => elem.id == e.target.getAttribute("data-id")
                   );
-
                   let arr = [];
-
                   if (
                     fav.find(
                       (elem) => elem.id == e.target.getAttribute("data-id")
