@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import TodoItem from "./TodoItem";
 
 function Todos({ todos }) {
-  //   console.log("todos render");
+  console.log("todos render");
   return (
     <ul>
       {todos &&

@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 
 function AddTodo({ setTodo, addTodo, getSearch }) {
-  //   console.log("add todo render");
+  console.log("add todo render");
   return (
     <div>
       <input type="text" placeholder="search" onChange={getSearch} />

@@ -33,7 +33,7 @@ function reducer(state, action) {
 // let dataFiltered=
 
 function TodoApp() {
-  //   console.log("app render");
+  console.log("app render");
   let [count, setCount] = useState(0);
 
   const [state, dispatch] = useReducer(reducer, {
@@ -56,12 +56,12 @@ function TodoApp() {
   //     });
   //   };
 
-  const getSearch = (e) => {
+  const getSearch = useCallback((e) => {
     dispatch({
       search: e.target.value,
       type: "getSearch",
     });
-  };
+  }, []);
 
   const addTodo = useCallback(() => {
     dispatch({
@@ -69,12 +69,13 @@ function TodoApp() {
       type: "addTodo",
     });
   }, [state.todo]);
-  //   let dataFiltered = useMemo(() => {
-  //     return state.todos.filter((elem) => elem.includes(state.search));
-  //   });
+
+  let dataFiltered = useMemo(() => {
+    return state.todos.filter((elem) => elem.includes(state.search));
+  }, [state.todos, state.search]);
 
   //   let dataFiltered = useMemo(() => {
-  let dataFiltered = state.todos.filter((elem) => elem.includes(state.search));
+  // let dataFiltered = state.todos.filter((elem) => elem.includes(state.search));
   //   });
   //   console.log(dataFiltered);
   const increment = () => {
@@ -90,7 +91,7 @@ function TodoApp() {
       <hr />
       <Todos setTodo={setTodo} todos={dataFiltered} />
       <hr />
-      <Main setTodo={setTodo} />
+      {/* <Main setTodo={setTodo} /> */}
     </div>
   );
 }
