@@ -76,7 +76,7 @@ function TodoApp() {
 
   //   let dataFiltered = useMemo(() => {
   // let dataFiltered = state.todos.filter((elem) => elem.includes(state.search));
-  //   });
+  // });
   //   console.log(dataFiltered);
   const increment = () => {
     setCount(++count);
