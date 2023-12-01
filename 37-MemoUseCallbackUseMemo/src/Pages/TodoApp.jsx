@@ -81,6 +81,9 @@ function TodoApp() {
   const increment = () => {
     setCount(++count);
   };
+
+  // [1] == [1];
+
   return (
     <div>
       <h1>counter - {count}</h1>
