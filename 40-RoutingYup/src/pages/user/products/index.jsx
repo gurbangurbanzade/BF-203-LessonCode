@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Products() {
   const [data, setData] = useState([]);
@@ -12,6 +13,15 @@ function Products() {
 
   return (
     <div>
+      <Helmet>
+        <title>Product</title>
+        <link
+          rel="shortcut icon"
+          href="https://avatars.githubusercontent.com/u/98018715?v=4"
+        />
+        {/* <link rel="shortcut icon" href="98018715" type="image/x-icon" /> */}
+      </Helmet>
+
       <table>
         <thead></thead>
         <tbody>
