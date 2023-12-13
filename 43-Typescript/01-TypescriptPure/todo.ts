@@ -55,14 +55,15 @@ function setTodos(arr: { id: number; tittle: string }[]) {
     let delBtns = document.querySelectorAll(".delBtn")!;
     for (let btn of delBtns) {
       btn.addEventListener("click", function (e) {
-        console.log(e?.target?.id);
+        const btn = e.target as Element;
+        console.log(btn.id);
 
         // let arr: {
         //   id: number;
         //   tittle: string;
         // }[] = [...arrTodos];
 
-        arrTodos = arrTodos.filter((elem) => elem.id != e?.target?.id);
+        arrTodos = arrTodos.filter((elem) => `${elem.id}` != btn.id);
 
         console.log(arrTodos);
         setTodos(arrTodos);
@@ -72,3 +73,109 @@ function setTodos(arr: { id: number; tittle: string }[]) {
 
   todoInput.value = "";
 }
+//////////////////////////////////
+
+function sum(a: number, c: number = 5, b: number): number {
+  console.log("c", c);
+  return a + b;
+}
+
+console.log(sum(3, undefined, 10));
+// console.log(sum("10", "20"));
+
+function sayHello(): void {
+  console.log("salam");
+}
+
+sayHello();
+
+function sumX(...number: number[]): number {
+  let sum = 0;
+
+  number.forEach((elem) => {
+    sum += elem;
+  });
+  console.log(sum);
+  return sum;
+}
+
+sumX(1);
+sumX(1, 2);
+sumX(1, 2, 3);
+
+function sumY(x: number, y: number): number;
+function sumY(x: string, y: string): string;
+
+function sumY(x: any, y: any): any {
+  // :
+
+  // number | string
+  // if (typeof x == "string" && typeof y == "string") {
+  //   return "ad  " + x + "  " + "soyad " + y;
+  // }
+
+  // if (typeof x == "number" && typeof y == "number") {
+  //   let sum = x + y;
+  //   return "cem=" + sum;
+  // }
+
+  return x + y;
+}
+console.log(sumY(5, 4));
+console.log(sumY("qurban", " qurbanzade"));
+
+let objX: {
+  name: string;
+  age: number;
+};
+
+objX = {
+  name: "qurban",
+  age: 30,
+};
+
+console.log(objX);
+
+interface Adult {
+  name: string;
+  age: number;
+}
+
+interface Kids {
+  name: string;
+  age: number;
+  isKid: boolean;
+}
+
+type Person = Adult & Kids;
+
+let obj7 = {
+  name: "gurban",
+  age: 30,
+  isKid: false,
+};
+
+console.log(obj7);
+
+// interface Adult {
+//   name: string;
+//   age: number;
+// }
+// interface Kids {
+//   name: string;
+//   age: number;
+//   isKid: boolean;
+// }
+// interface Person = Adult & Kids
+
+// let obj5: Person = {
+//   name: "kanan",
+//   age: 2,
+// };
+// let obj6: Person = {
+//   name: "ahmad",
+//   age: 3,
+// };
+
+// console.log(obj5);
+// console.log(obj6);

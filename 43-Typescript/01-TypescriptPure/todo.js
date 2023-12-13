@@ -40,13 +40,13 @@ function setTodos(arr) {
         for (var _i = 0, delBtns_1 = delBtns; _i < delBtns_1.length; _i++) {
             var btn = delBtns_1[_i];
             btn.addEventListener("click", function (e) {
-                var _a;
-                console.log((_a = e === null || e === void 0 ? void 0 : e.target) === null || _a === void 0 ? void 0 : _a.id);
+                var btn = e.target;
+                console.log(btn.id);
                 // let arr: {
                 //   id: number;
                 //   tittle: string;
                 // }[] = [...arrTodos];
-                arrTodos = arrTodos.filter(function (elem) { var _a; return elem.id != ((_a = e === null || e === void 0 ? void 0 : e.target) === null || _a === void 0 ? void 0 : _a.id); });
+                arrTodos = arrTodos.filter(function (elem) { return "".concat(elem.id) != btn.id; });
                 console.log(arrTodos);
                 setTodos(arrTodos);
             });
@@ -54,3 +54,76 @@ function setTodos(arr) {
     });
     todoInput.value = "";
 }
+//////////////////////////////////
+function sum(a, c, b) {
+    if (c === void 0) { c = 5; }
+    console.log("c", c);
+    return a + b;
+}
+console.log(sum(3, undefined, 10));
+// console.log(sum("10", "20"));
+function sayHello() {
+    console.log("salam");
+}
+sayHello();
+function sumX() {
+    var number = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        number[_i] = arguments[_i];
+    }
+    var sum = 0;
+    number.forEach(function (elem) {
+        sum += elem;
+    });
+    console.log(sum);
+    return sum;
+}
+sumX(1);
+sumX(1, 2);
+sumX(1, 2, 3);
+function sumY(x, y) {
+    // :
+    // number | string
+    // if (typeof x == "string" && typeof y == "string") {
+    //   return "ad  " + x + "  " + "soyad " + y;
+    // }
+    // if (typeof x == "number" && typeof y == "number") {
+    //   let sum = x + y;
+    //   return "cem=" + sum;
+    // }
+    return x + y;
+}
+console.log(sumY(5, 4));
+console.log(sumY("qurban", " qurbanzade"));
+var objX;
+objX = {
+    name: "qurban",
+    age: 30,
+};
+console.log(objX);
+var obj7 = {
+    name: "gurban",
+    age: 30,
+    isKid: false,
+};
+console.log(obj7);
+// interface Adult {
+//   name: string;
+//   age: number;
+// }
+// interface Kids {
+//   name: string;
+//   age: number;
+//   isKid: boolean;
+// }
+// interface Person = Adult & Kids
+// let obj5: Person = {
+//   name: "kanan",
+//   age: 2,
+// };
+// let obj6: Person = {
+//   name: "ahmad",
+//   age: 3,
+// };
+// console.log(obj5);
+// console.log(obj6);
