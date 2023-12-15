@@ -4,6 +4,7 @@ import { RootState } from "./../redux/store/store";
 
 import { useSelector, useDispatch } from "react-redux";
 import DeleteBtn from "./DeleteBtn";
+import EditBtn from "./EditBtn";
 interface Props {
   todos: Todo[];
 }
@@ -19,7 +20,8 @@ function Todos({ todos }: Props) {
           reduxTodos.map((elem) => {
             return (
               <li key={elem.id}>
-                {elem.tittle} <DeleteBtn id={elem.id} />
+                ={elem.tittle} <DeleteBtn id={elem.id} />
+                <EditBtn id={elem.id} />
               </li>
             );
           })}
