@@ -1,0 +1,24 @@
+const router = require("express").Router();
+const productControllers = require("../controllers/productControllers");
+const userAuth = require("./../middlewares/userAuthMidd");
+const { refTokens } = require("./../controllers/userControllers");
+// router.post("/users", userControllers.postUser);
+// router.get("/products", userControllers.getAllUser);
+// router.get("/users/:id", userControllers.getUserById);
+// router.delete("/users/:id", userControllers.getDeleteUser);
+// router.patch("/users/:id", userControllers.getUpdateUser);
+// router.put("/users/:id", userControllers.getPutUser);
+
+router.get("/", userAuth, productControllers.getAllProduct);
+console.log("cixis olmamisdan qabaq", refTokens);
+
+router.get("/logout", async (req, res) => {
+  const refToken = req.headers.refreshtoken.split(" ")[1];
+  console.log("cixis edildi", refToken);
+  let arr = [];
+  arr = refTokens.filter((elem) => elem != refToken);
+
+  console.log("cixis edildi", arr);
+});
+
+module.exports = router;
